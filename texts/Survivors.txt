@@ -1,3 +1,35 @@
+Doctor
+Lawyer
+Gardener
+Thief
+Lucky Guy
 Magician
-The Mind's Eyes
+Explorer
+Mercenary
+Coordinator
+Mechanic
+Forward
+The Mind's Eye
+Priestess
+Perfumer
+Cowboy
+Female Dancer
+Seer
+Embalmer
+Prospector
+Enchantress
+Wildling
+Acrobat
 First Officer
+Barmaid
+Postman
+Grave Keeper
+Prisoner
+Entomologist
+Painter
+Batter
+Toy Merchant
+Patient
+"Psychologist"
+Novelist
+"Little Girl"
