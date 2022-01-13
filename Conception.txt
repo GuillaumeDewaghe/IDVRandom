@@ -1,0 +1,36 @@
+# WIP
+
+- This program will allow to have a random :
+    * survivor or hunter
+    * persona
+    * trait
+- Survivors and hunters will be in a list respectively
+- The persona web will be displayed like this :
+
+                                       (16)
+                                        *
+                                        |
+                                        *
+                                  (15)  |  (1)  (2)
+                                     *  *  *    *
+                                  (14)\ | /    /
+                             (13) * * - *     * - * (3)
+                                   \    |    /
+                   (12) * - * - * - * - . - * - * - * - * (4)
+                                   /    |    \
+                         (11) * - *     *     *
+                                 /    / | \   (5)
+                                *    *  *  * - * (6)
+                             (10)  (9)  |   \
+                                        *    *
+                                        |    (7)
+                                        *
+                                       (8)
+
+- The information displayed on the persona web is not defined yet
+- The persona web will work as the "clock system" in IDV showed by the number between parentheses (which will be not displayed)
+- There are the rules :
+    * If the random number is 4/8/12/16, only the half of the branch will be full, to have the other half, you will need to have the same number again
+    * If you have the other numbers, the branch will be full
+    * As for the normal persona web, the number of points is limited to 120
+
