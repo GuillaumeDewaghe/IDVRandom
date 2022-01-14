@@ -1,7 +1,9 @@
 import random
 
+from typing import List
 
-def readFile(fileName):
+
+def readFile(fileName: str):
     """
     Function which allows to read a file and to save the content.
 
@@ -14,7 +16,7 @@ def readFile(fileName):
     return lines
 
 
-def displayList(itemsList):
+def displayList(itemsList: List[str]):
     """
     Displays all the elements from the list
 
@@ -24,7 +26,7 @@ def displayList(itemsList):
         print(item)
 
 
-def randomChoice(itemsList):
+def randomChoice(itemsList: List[str]):
     """
     Shuffles and chooses a random element from the list
 
