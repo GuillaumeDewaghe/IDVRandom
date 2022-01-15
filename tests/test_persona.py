@@ -5,6 +5,7 @@ from classes.persona import survivorsPersonaWeb
 from classes.persona import huntersPersonaWeb
 from classes.persona import isAllPersonaCoordinatesDifferent
 from classes.persona import displayPersonaWeb
+from classes.persona import randomPersonaWeb
 
 
 class TestPersona(TestCase):
@@ -52,3 +53,11 @@ class TestPersona(TestCase):
         #     print(f"{persona.showInfo()}")
         #     index += 1
         displayPersonaWeb(survivorsPersonaWeb)
+
+    def testRandomPersonaWeb(self):
+        count = 0
+        randomSurvivorPersonaWeb = randomPersonaWeb(survivorsPersonaWeb)
+        for persona in randomSurvivorPersonaWeb:
+            count += persona.value * 5
+        print(f"Number of points used : {count}")
+        displayPersonaWeb(randomSurvivorPersonaWeb)

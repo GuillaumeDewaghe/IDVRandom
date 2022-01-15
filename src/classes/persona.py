@@ -81,10 +81,257 @@ def displayPersonaWeb(personaWeb: List[Persona]):
     print(f"\t" * 10 + f"{personaWeb[19].value}")
 
 
-# TODO: Create a function which gives a random persona
-def randomPersona():
-    
-    random.randint(1, 16)
+def randomPersonaWeb(personaWeb: List[Persona]):
+    """
+    Function which gives a random persona
+
+    :param list[Persona] personaWeb: The persona web of the survivor or the hunter
+    :return: The random persona web
+    :rtype: list[Persona]
+    """
+    personaPoints = 120
+    while personaPoints > 0:
+        # Give a random int
+        randomInt = random.randint(1, 16)
+        # print(f"randomInt = {randomInt}")
+        match randomInt:
+            # Obsessive or Restraint
+            case 1:
+                # print("It passed at 1 !")
+                if personaWeb[0].value < 1 and personaPoints > 0:
+                    personaWeb[0].value = 1
+                    personaPoints -= 5
+                if personaWeb[7].value < 1 and personaPoints > 0:
+                    personaWeb[7].value = 1
+                    personaPoints -= 5
+
+            # Snooze or Wanted Order
+            case 2:
+                # print("It passed at 2 !")
+                if personaWeb[8].value < 1 and personaPoints > 0:
+                    personaWeb[8].value = 1
+                    personaPoints -= 5
+                if personaWeb[12].value < 1 and personaPoints > 0:
+                    personaWeb[12].value = 1
+                    personaPoints -= 5
+                if personaWeb[13].value < 3:
+                    while personaWeb[13].value < 3 and personaPoints > 0:
+                        personaWeb[13].value += 1
+                        personaPoints -= 5
+
+            # Self Deception or Impact
+            case 3:
+                # print("It passed at 3 !")
+                if personaWeb[8].value < 1 and personaPoints > 0:
+                    personaWeb[8].value = 1
+                    personaPoints -= 5
+                if personaWeb[12].value < 1 and personaPoints > 0:
+                    personaWeb[12].value = 1
+                    personaPoints -= 5
+                if personaWeb[14].value < 3:
+                    while personaWeb[14].value < 3 and personaPoints > 0:
+                        personaWeb[14].value += 1
+                        personaPoints -= 5
+
+            # Borrowed Time or Trump Card
+            case 4:
+                # print("It passed at 4 !")
+                if personaWeb[8].value < 1 and personaPoints > 0:
+                    personaWeb[8].value = 1
+                    personaPoints -= 5
+                # Case of the 1st 4
+                if personaWeb[9].value < 3:
+                    while personaWeb[9].value < 3 and personaPoints > 0:
+                        personaWeb[9].value += 1
+                        personaPoints -= 5
+                # Case of the 2nd 4
+                else:
+                    if personaWeb[10].value < 3:
+                        while personaWeb[10].value < 3 and personaPoints > 0:
+                            personaWeb[10].value += 1
+                            personaPoints -= 5
+                    if personaWeb[11].value < 1 and personaPoints > 0:
+                        personaWeb[11].value = 1
+                        personaPoints -= 5
+
+            # Cold or Desperate Fight
+            case 5:
+                # print("It passed at 5 !")
+                if personaWeb[0].value < 1 and personaPoints > 0:
+                    personaWeb[0].value = 1
+                    personaPoints -= 5
+                if personaWeb[15].value < 1 and personaPoints > 0:
+                    personaWeb[15].value = 1
+                    personaPoints -= 5
+
+            # Doctor or Control Freak
+            case 6:
+                # print("It passed at 6 !")
+                if personaWeb[16].value < 1 and personaPoints > 0:
+                    personaWeb[16].value = 1
+                    personaPoints -= 5
+                if personaWeb[20].value < 1 and personaPoints > 0:
+                    personaWeb[20].value = 1
+                    personaPoints -= 5
+                if personaWeb[21].value < 3:
+                    while personaWeb[21].value < 3 and personaPoints > 0:
+                        personaWeb[21].value += 1
+                        personaPoints -= 5
+
+            # Shelter or Giant Claw
+            case 7:
+                # print("It passed at 7 !")
+                if personaWeb[16].value < 1 and personaPoints > 0:
+                    personaWeb[16].value = 1
+                    personaPoints -= 5
+                if personaWeb[20].value < 1 and personaPoints > 0:
+                    personaWeb[20].value = 1
+                    personaPoints -= 5
+                if personaWeb[22].value < 3:
+                    while personaWeb[22].value < 3 and personaPoints > 0:
+                        personaWeb[22].value += 1
+                        personaPoints -= 5
+
+            # Tide Turner or Detention
+            case 8:
+                # print("It passed at 8 !")
+                if personaWeb[16].value < 1 and personaPoints > 0:
+                    personaWeb[16].value = 1
+                    personaPoints -= 5
+                # Case of the 1st 8
+                if personaWeb[17].value < 3:
+                    while personaWeb[17].value < 3 and personaPoints > 0:
+                        personaWeb[17].value += 1
+                        personaPoints -= 5
+                # Case of the 2nd 8
+                else:
+                    if personaWeb[18].value < 3:
+                        while personaWeb[18].value < 3 and personaPoints > 0:
+                            personaWeb[18].value += 1
+                            personaPoints -= 5
+                    if personaWeb[19].value < 1 and personaPoints > 0:
+                        personaWeb[19].value = 1
+                        personaPoints -= 5
+
+            # Mech Elite or No Survivors
+            case 9:
+                # print("It passed at 9 !")
+                if personaWeb[16].value < 1 and personaPoints > 0:
+                    personaWeb[16].value = 1
+                    personaPoints -= 5
+                if personaWeb[23].value < 1 and personaPoints > 0:
+                    personaWeb[23].value = 1
+                    personaPoints -= 5
+
+            # Great Power or Hunt
+            case 10:
+                # print("It passed at 10 !")
+                if personaWeb[24].value < 1 and personaPoints > 0:
+                    personaWeb[24].value = 1
+                    personaPoints -= 5
+                if personaWeb[28].value < 1 and personaPoints > 0:
+                    personaWeb[28].value = 1
+                    personaPoints -= 5
+                if personaWeb[29].value < 3:
+                    while personaWeb[29].value < 3 and personaPoints > 0:
+                        personaWeb[29].value += 1
+                        personaPoints -= 5
+
+            # Will to Survive or Street Sweeper
+            case 11:
+                # print("It passed at 11 !")
+                if personaWeb[24].value < 1 and personaPoints > 0:
+                    personaWeb[24].value = 1
+                    personaPoints -= 5
+                if personaWeb[28].value < 1 and personaPoints > 0:
+                    personaWeb[28].value = 1
+                    personaPoints -= 5
+                if personaWeb[30].value < 3:
+                    while personaWeb[30].value < 3 and personaPoints > 0:
+                        personaWeb[30].value += 1
+                        personaPoints -= 5
+
+            # Broken Window or Insolence
+            case 12:
+                # print("It passed at 12 !")
+                if personaWeb[24].value < 1 and personaPoints > 0:
+                    personaWeb[24].value = 1
+                    personaPoints -= 5
+                    # Case of the 1st 12
+                if personaWeb[25].value < 3:
+                    while personaWeb[25].value < 3 and personaPoints > 0:
+                        personaWeb[25].value += 1
+                        personaPoints -= 5
+                # Case of the 2nd 12
+                else:
+                    if personaWeb[26].value < 3:
+                        while personaWeb[26].value < 3 and personaPoints > 0:
+                            personaWeb[26].value += 1
+                            personaPoints -= 5
+                    if personaWeb[27].value < 1 and personaPoints > 0:
+                        personaWeb[27].value = 1
+                        personaPoints -= 5
+
+            # Exit Path or Claustrophobia
+            case 13:
+                # print("It passed at 13 !")
+                if personaWeb[24].value < 1 and personaPoints > 0:
+                    personaWeb[24].value = 1
+                    personaPoints -= 5
+                if personaWeb[31].value < 1 and personaPoints > 0:
+                    personaWeb[31].value = 1
+                    personaPoints -= 5
+
+            # Healing or Rage
+            case 14:
+                # print("It passed at 14 !")
+                if personaWeb[0].value < 1 and personaPoints > 0:
+                    personaWeb[0].value = 1
+                    personaPoints -= 5
+                if personaWeb[4].value < 1 and personaPoints > 0:
+                    personaWeb[4].value = 1
+                    personaPoints -= 5
+                if personaWeb[5].value < 3:
+                    while personaWeb[5].value < 3 and personaPoints > 0:
+                        personaWeb[5].value += 1
+                        personaPoints -= 5
+
+            # Air Walk or Berserker
+            case 15:
+                # print("It passed at 15 !")
+                if personaWeb[0].value < 1 and personaPoints > 0:
+                    personaWeb[0].value = 1
+                    personaPoints -= 5
+                if personaWeb[4].value < 1 and personaPoints > 0:
+                    personaWeb[4].value = 1
+                    personaPoints -= 5
+                if personaWeb[6].value < 3:
+                    while personaWeb[6].value < 3 and personaPoints > 0:
+                        personaWeb[6].value += 1
+                        personaPoints -= 5
+
+            # Spectator or Confined Space
+            case 16:
+                # print("It passed at 16 !")
+                if personaWeb[0].value < 1 and personaPoints > 0:
+                    personaWeb[0].value = 1
+                    personaPoints -= 5
+                    # Case of the 1st 16
+                if personaWeb[1].value < 3:
+                    while personaWeb[1].value < 3 and personaPoints > 0:
+                        personaWeb[1].value += 1
+                        personaPoints -= 5
+                # Case of the 2nd 16
+                else:
+                    if personaWeb[2].value < 3:
+                        while personaWeb[2].value < 3 and personaPoints > 0:
+                            personaWeb[2].value += 1
+                            personaPoints -= 5
+                    if personaWeb[3].value < 1 and personaPoints > 0:
+                        personaWeb[3].value = 1
+                        personaPoints -= 5
+
+    return personaWeb
 
 
 survivorsPersonaWeb = \
