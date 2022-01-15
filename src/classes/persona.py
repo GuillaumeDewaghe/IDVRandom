@@ -26,14 +26,10 @@ class Persona:
         """
         print(f"Name = {self.name}, value = {self.value}, maximum = {self.maximum}, x = {self.x}, y = {self.y}")
 
-    def incrementValue(self):
-        if self.value < self.maximum:
-            self.value = self.value + 1
-
 
 def isAllPersonaCoordinatesDifferent(personaWeb: List[Persona]):
     """
-    Function to verify if all the coordinates of the personas are different or not.
+    Function to verify if all the coordinates of the personas are different or not
 
     :param list[Persona] personaWeb: Persona web of a survivor or a hunter
     :return: True if all the coordinates are different, else false
@@ -50,35 +46,36 @@ def isAllPersonaCoordinatesDifferent(personaWeb: List[Persona]):
 
 
 def displayPersonaWeb(personaWeb: List[Persona]):
+    """
+    Display the persona web as in game
+
+    :param List[Persona] personaWeb:
+    """
     # North branch
-    print(f"\t" * 10 + f"{personaWeb[3].value}")
-    print(f"\t" * 10 + "|")
-    print(f"\t" * 8 + f"   {personaWeb[6].value}    {personaWeb[2].value}")
-    print(f"\t" * 9 + "\   |")
-    print(
-        f"\t" * 8 + f"{personaWeb[5].value} -- {personaWeb[4].value}  {personaWeb[1].value}  {personaWeb[7].value}     {personaWeb[13].value}")
-    print(f"\t" * 9 + "  \ | /     /")
-    print(
-        f"\t" * 8 + f" {personaWeb[31].value}      {personaWeb[0].value}      {personaWeb[12].value} -- {personaWeb[14].value}")
-    print(f"\t" * 8 + "  \     |     /")
+    print(f"                                        {personaWeb[3].value}\n"
+          f"                                        |\n"
+          f"                                   {personaWeb[6].value}    {personaWeb[2].value}\n"
+          f"                                    \   |\n"
+          f"                                {personaWeb[5].value} -- {personaWeb[4].value}  {personaWeb[1].value}  {personaWeb[7].value}     {personaWeb[13].value}\n"
+          f"                                      \ | /     /\n"
+          f"                                 {personaWeb[31].value}      {personaWeb[0].value}      {personaWeb[12].value} -- {personaWeb[14].value}\n"
+          f"                                  \     |     /")
 
     # West and East branches
-    print(f"\t" * 5
-          + f"{personaWeb[27].value} -- {personaWeb[26].value} -- {personaWeb[25].value} -- {personaWeb[24].value} -- "
-          + "*"
-          + f" -- {personaWeb[8].value} -- {personaWeb[9].value} -- {personaWeb[10].value} -- {personaWeb[11].value}")
+    print(f"                    "
+          f"{personaWeb[27].value} -- {personaWeb[26].value} -- {personaWeb[25].value} -- {personaWeb[24].value} -- "
+          f"*"
+          f" -- {personaWeb[8].value} -- {personaWeb[9].value} -- {personaWeb[10].value} -- {personaWeb[11].value}")
 
     # South Branch
-    print(f"\t" * 8 + "  /     |     \ ")
-    print(
-        f"\t" * 7 + f"{personaWeb[30].value} -- {personaWeb[28].value}      {personaWeb[16].value}      {personaWeb[15].value}")
-    print(f"\t" * 8 + "/     / | \ ")
-    print(
-        f"\t" * 7 + f"   {personaWeb[29].value}     {personaWeb[23].value}  {personaWeb[17].value}  {personaWeb[20].value} -- {personaWeb[21].value}")
-    print(f"\t" * 10 + "|   \ ")
-    print(f"\t" * 10 + f"{personaWeb[18].value}    {personaWeb[22].value}")
-    print(f"\t" * 10 + "|")
-    print(f"\t" * 10 + f"{personaWeb[19].value}")
+    print(f"                                  /     |     \ \n"
+          f"                            {personaWeb[30].value} -- {personaWeb[28].value}      {personaWeb[16].value}      {personaWeb[15].value}\n"
+          f"                                /     / | \ \n"
+          f"                               {personaWeb[29].value}     {personaWeb[23].value}  {personaWeb[17].value}  {personaWeb[20].value} -- {personaWeb[21].value}\n"
+          f"                                        |   \ \n"
+          f"                                        {personaWeb[18].value}    {personaWeb[22].value}\n"
+          f"                                        |\n"
+          f"                                        {personaWeb[19].value}")
 
 
 def randomPersonaWeb(personaWeb: List[Persona]):
@@ -427,3 +424,6 @@ huntersPersonaWeb = \
         Persona("Street Sweeper", 3, -3, -1),
         Persona("Claustrophobia", 1, -2, 1)
     ]
+
+if __name__ == '__main__':
+    displayPersonaWeb(survivorsPersonaWeb)

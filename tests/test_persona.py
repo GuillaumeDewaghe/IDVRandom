@@ -1,11 +1,6 @@
 from unittest import TestCase
 
-from classes.persona import Persona
-from classes.persona import survivorsPersonaWeb
-from classes.persona import huntersPersonaWeb
-from classes.persona import isAllPersonaCoordinatesDifferent
-from classes.persona import displayPersonaWeb
-from classes.persona import randomPersonaWeb
+from classes.persona import *
 
 
 class TestPersona(TestCase):
