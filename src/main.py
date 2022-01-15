@@ -58,6 +58,7 @@ def main():
                 print("Wrong choice, choose a correct one !")
                 i = input("Press Enter to continue...")
                 clearConsole()
+    i = input("Press Enter to continue...")
     print("End of the program")
 
 

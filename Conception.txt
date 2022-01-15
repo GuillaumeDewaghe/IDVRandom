@@ -1,5 +1,3 @@
-# WIP
-
 - This program will allow to have a random :
     * survivor or hunter
     * persona
